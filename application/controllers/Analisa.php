@@ -35,7 +35,7 @@ class Analisa extends CI_Controller {
 		//cari id sekolah
 		$nama_sekolah=$data['siswa'][0]->nama_sekolah;
 		//cari id_sekolah
-		$sekolah=$this->db->where('nama',$nama_sekolah)->get('tb_smp')->result();		
+		$sekolah=$this->db->where('id',$nama_sekolah)->get('tb_smp')->result();		
 
 		$id_lokasi_smp=$sekolah[0]->id_lokasi;
 		// cari longitude dan lattitude

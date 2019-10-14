@@ -37,12 +37,12 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
               <i class="material-icons">person</i>
               <p>Sekolah</p>
             </a>
-          </li> -->
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Siswa');?>">
               <i class="material-icons">person</i>

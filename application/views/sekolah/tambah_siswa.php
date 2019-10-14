@@ -21,7 +21,7 @@
 		            <input type="text" name="nama" id="nama" class="form-control">
 		        </div>
 		    </div>
-		    <div class="form-group">
+		    <!-- div class="form-group">
 		    	<label class="col-lg-2 control-label">Nama Sekolah</label>
 		        <div class="col-lg-5">
 		            <select name="smp" id="smp" class="form-control">
@@ -30,7 +30,9 @@
 	                    <?php } ?>
 	                </select>
 		        </div>
-		    </div>
+		    </div> -->
+		    <input type="text" name="smp" id="smp" class="form-control" value="<?php echo $this->uri->segment(3) ?>">
+
   			<div class="form-group">
 		        <label class="col-lg-2 control-label">Jumlah Nilai UN</label>
 		        <div class="col-lg-5">

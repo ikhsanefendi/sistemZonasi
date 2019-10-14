@@ -20,12 +20,12 @@
 		            <input type="text" name="nama" id="nama" class="form-control">
 		        </div>
 		    </div>
-		    
+		   <!--  
 		    <div class="form-group">
 		        <div class="col-lg-5">
 		            <input type="text" name="keterangan" id="keterangan" class="form-control">
 		        </div>
-		    </div>
+		    </div> -->
   			<div class="form-group">
 		        <label class="col-lg-2 control-label">Alamat</label>
 		        <div class="col-lg-5">

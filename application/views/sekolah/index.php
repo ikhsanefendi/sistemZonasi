@@ -26,9 +26,10 @@
         <tr>
             <td>Id Sekolah</td>
             <td>Nama Sekolah</td>
-            <td>Alamat Sekolah</td>
+            <td>Nilai Akreditasi</td>
             <td>Jumlah Guru</td>
-            <td>Jumlah Siswa</td>
+            <td>Data Siswa</td>
+            <td colspan="2">Action</td>
         </tr>
     </thead>
    	<?php foreach ($smp as $key => $smp) {
@@ -38,6 +39,9 @@
         <td><?php echo $smp->nama?></td>
         <td><?php echo $smp->nilai_akreditasi?></td>
         <td><?php echo $smp->jumlah_guru?></td>
+        <td><a href="<?php echo site_url('Siswa/sekolah/'.$smp->id);?>">Siswa</a></td>
+		<td><a class="glyphicon-trash" href="<?php echo site_url('Sekolah/edit/'.$smp->id);?>"></a></td>
+		<td><a class="glyphicon-edit" href="<?php echo site_url('Sekolah/hapus/'.$smp->id);?>"></a></td>
 
     </tr>
    	<?php } ?>

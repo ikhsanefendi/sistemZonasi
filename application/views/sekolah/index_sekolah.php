@@ -19,10 +19,7 @@
 	<body>
 	<h1 class="text-center">Data Siswa</h1>
 
-	<a href="<?php echo site_url('Siswa/tambah')?>" class="btn btn-primary">Tambah Siswa</a>
-	<a href="<?php echo site_url('Siswa/import')?>" class="btn btn-primary">Import Siswa</a>
-
-
+	<a href="<?php echo site_url('Siswa/tambah_siswa/'.$this->uri->segment(3) )?>" class="btn btn-primary">Tambah Siswa</a>
 	<table class="table table-striped">
     <thead>
         <tr>
