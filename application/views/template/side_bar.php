@@ -37,13 +37,30 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
               <i class="material-icons">person</i>
               <p>Sekolah</p>
             </a>
+          </li> -->
+          <li class="nav-item ">
+            <a class="nav-link" href="<?php echo site_url('Siswa');?>">
+              <i class="material-icons">person</i>
+              <p>Siswa</p>
+            </a>
           </li>
-
+          <li class="nav-item ">
+            <a class="nav-link" href="<?php echo site_url('Kriteria');?>">
+              <i class="material-icons">library_books</i>
+              <p>Kriteria</p>
+            </a>
+          </li>
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="<?php echo site_url('Bobot');?>">
+              <i class="material-icons">library_books</i>
+              <p>Nilai Bobot</p>
+            </a>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Analisa');?>">
               <i class="material-icons">library_books</i>
