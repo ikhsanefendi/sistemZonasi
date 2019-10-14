@@ -35,7 +35,8 @@ class Analisa extends CI_Controller {
 		//cari id sekolah
 		$nama_sekolah=$data['siswa'][0]->nama_sekolah;
 		//cari id_sekolah
-		$sekolah=$this->db->where('nama',$nama_sekolah)->get('tb_smp')->result();
+		$sekolah=$this->db->where('nama',$nama_sekolah)->get('tb_smp')->result();		
+
 		$id_lokasi_smp=$sekolah[0]->id_lokasi;
 		// cari longitude dan lattitude
 		$lokasi=$this->db->where('id_sekolah',$id_lokasi_smp)->get('tb_lokasi')->row();
@@ -55,17 +56,43 @@ class Analisa extends CI_Controller {
 		foreach ($sma as $key ) {
 			$long_sma=$key->longitude;
 			$lat_sma=$key->latitude;
-			$hasil=$this->JarakModel->getDistanceBetween(abs($lat_smp), abs($lat_sma), abs($long_smp), abs($long_sma), $unit = 'Mi');
+			$hasil=$this->JarakModel->getDistanceBetween($lat_smp, $lat_sma, $long_smp, $long_sma, $unit = 'Mi');
 			
-			print_r($hasil);
-		}		
-	
+			
+			// $jarak[]=$hasil;
+			$jarak[]= array('hitung_jarak' =>$hasil,
+						'id_lokasi'=>$key->id_lokasi,);
+			// print_r($long_smp);
+			// echo " ";
+			// print_r($lat_smp);
+			// echo " ";
+			// print_r($long_sma);
+			// echo " ";
+			// print_r($lat_sma);
+			// echo " ";
+			// print_r($hasil);
+			// echo " ";
 
-		// foreach ($sma as $key) {
-		// 	print_r($sma->longitude);
-		// }
-		die();
-		// $data['lokasi']=$this->db->get('')->result();			
+			// echo "<br></br>";
+					
+		}		
+		$data['jarak']=$jarak;	
+		// print_r($data['jarak']);
+		// die();
+		// $data['max_akreditasi']=$this->db->select_max('nilai_akreditasi')->get('tb_smp')->row();
+		// $data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
+		$data['bobot_un']=$this->db->select('nilai')->where('id',"nilai_un")->get('tb_bobot')->row();
+		$data['bobot_ns']=$this->db->select('nilai')->where('id',"nilai_ns")->get('tb_bobot')->row();
+		$data['bobot_guru']=$this->db->select('nilai')->where('id',"jumlah_guru")->get('tb_bobot')->row();
+		$data['bobot_jarak']=$this->db->select('nilai')->where('id',"jarak")->get('tb_bobot')->row();
+		$data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
+		$nilai_akreditasi=$sekolah[0]->nilai_akreditasi;
+		$data['akreditasi']=$nilai_akreditasi;
+		$data['max_akreditasi']=$this->db->select_max('nilai_akreditasi')->get('tb_smp')->row();		
+		// print_r($data['max_akreditasi']);
+
+		// // print_r($data['max_guru']);
+		// die();
 		$this->load->view('analisa_2/data_sekolah',$data);
 	}
 

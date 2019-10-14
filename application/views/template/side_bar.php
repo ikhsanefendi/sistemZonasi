@@ -55,12 +55,12 @@
               <p>Kriteria</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Bobot');?>">
               <i class="material-icons">library_books</i>
               <p>Nilai Bobot</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="<?php echo site_url('Analisa');?>">
               <i class="material-icons">library_books</i>

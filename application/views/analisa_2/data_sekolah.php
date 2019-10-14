@@ -19,13 +19,15 @@
 	<body>
 
 	<div class="col-md-12">
-	<h1 class="text-center">Data Sekolah SMA</h1>
+	<h1 class="text-center">Data Analisa Sekolah SMA</h1>
 	<table class="table table-striped">
 	    <thead>
 	        <tr>
 	            <td>Id Siswa</td>
 	            <td>Nama Siswa</td>
 	            <td>Nama Sekolah</td>
+	            <td>Nilai UN</td>
+	            <td>Nilai Ujian Sekolah</td>
 	            <td>Jarak</td>
 	            <td>Nama SMA</td>
 	            <td>Penilaian</td>
@@ -33,17 +35,43 @@
 
 	        </tr>
 	    </thead>
-	   	<?php foreach ($siswa as $key) { ?>
-		    <tr>
-		
-		        <td><?php echo $key->id?></td>
-		        <td><?php echo $key->nama_siswa?></td>
-		        <td><?php echo $key->nama_sekolah?></td>
-		        <td><?php echo $key->jumlah_un ?></td>
-				<td></td>
+		   
+		   	<?php foreach ($jarak as $jarak){?>
+	   			 <tr>
+	   			<?php foreach ($siswa as $key) { ?>	
+			        <td><?php echo $key->id?></td>
+			        <td><?php echo $key->nama_siswa?></td>
+			        <td><?php echo $key->nama_sekolah?></td>
+			        <td><?php echo $key->jumlah_un ?></td>
+			        <td><?php echo $key->jumlah_nilai_sekolah ?></td>
+					<td><?php echo $jarak['hitung_jarak'];?> Km</td>
+					
+					<?php $bu=$bobot_un->nilai;
+						 $bn=$bobot_ns->nilai;
+						 $bg=$bobot_guru->nilai;
+						 $bj=$bobot_jarak->nilai;
+						 $total=$bu+$bn+$bg+$bj;
+					?> 
+					<td><?php $aaa=$this->db->where('id',$jarak['id_lokasi'])->get('tb_sma')->row();
+								echo $aaa->nama?></td>
+					
+					<td>
+						<?php echo $n_un=$key->jumlah_un/100;
+								echo ' ';
+								echo $n_ns=$key->jumlah_nilai_sekolah/100;
+								echo ' ';
+							
+								echo $n_akreditasi=$akreditasi/$max_akreditasi->nilai_akreditasi;
+								?>
+					</td>
 
+
+					
+		   		<?php } ?>
 		    </tr>
-	   	<?php } ?>
+				
+	   		<?php } ?>
+				   	
 		
 	</div>
 		<!-- jQuery -->
