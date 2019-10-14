@@ -26,7 +26,7 @@
 		        <div class="col-lg-5">
 		            <select name="smp" id="smp" class="form-control">
 	                    <?php foreach ($smp as $key) {?>
-	                       	<option value="<?php echo $key->nama?>"><?php echo $key->nama?></option>
+	                       	<option value="<?php echo $key->id?>"><?php echo $key->nama?></option>
 	                    <?php } ?>
 	                </select>
 		        </div>
