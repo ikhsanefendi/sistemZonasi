@@ -22,6 +22,7 @@
 		    </div>
 		    
 		    <div class="form-group">
+		        <label class="col-lg-2 control-label">Nama Sekolah</label>
 		        <div class="col-lg-5">
 		            <input type="text" name="keterangan" id="keterangan" class="form-control">
 		        </div>
