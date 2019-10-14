@@ -30,45 +30,36 @@
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="<?php echo site_url('Dashboard');?>">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
-              <i class="material-icons">person</i>
-              <p>Sekolah</p>
-            </a>
-          </li> -->
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Siswa');?>">
-              <i class="material-icons">person</i>
-              <p>Siswa</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Kriteria');?>">
-              <i class="material-icons">library_books</i>
-              <p>Kriteria</p>
-            </a>
-          </li>
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Bobot');?>">
-              <i class="material-icons">library_books</i>
-              <p>Nilai Bobot</p>
-            </a>
-          </li> -->
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Analisa');?>">
-              <i class="material-icons">library_books</i>
-              <p>Analisa</p>
-            </a>
-          </li>
-          
-        </ul>
+      <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo site_url('Dashboard');?>">
+          <i class="material-icons">dashboard</i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
+          <i class="material-icons">person</i>
+          <span>Sekolah</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('Siswa');?>">
+            <i class="material-icons">person</i>
+          <span>Siswa</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('Kriteria');?>">
+          <i class="material-icons">library_books</i>
+          <span>Kriteria</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<<?php echo site_url('Analisa');?>">
+            <i class="material-icons">library_books</i>
+          <span>Analisa</span></a>
+      </li>
+    </ul>
       </div>
       </div>
     </div>       
