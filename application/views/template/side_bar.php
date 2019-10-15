@@ -25,17 +25,17 @@
             <a href="<?php echo site_url('Dashboard');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Dashboard</span></a>
           </li>
           <li>
-            <a href="<?php echo site_url('Sekolah');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Sekolah</span></a>
+            <a href="<?php echo site_url('Sekolah');?>"><i class="menu-icon fa fa-th"></i><span class="mm-text">Sekolah</span></a>
           </li>
           <li>
-            <a href="<?php echo site_url('Siswa');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Siswa</span></a>
+            <a href="<?php echo site_url('Siswa');?>"><i class="menu-icon fa fa-user"></i><span class="mm-text">Siswa</span></a>
           </li>
         
           <li>
             <a href="<?php echo site_url('Kriteria');?>"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">Kriteria</span></a>
           </li>
           <li>
-            <a href="<?php echo site_url('Analisa');?>"><i class="menu-icon fa fa-flask"></i><span class="mm-text">Analisa</span></a>
+            <a href="<?php echo site_url('Analisa');?>"><i class="menu-icon fa fa-sitemap"></i><span class="mm-text">Analisa</span></a>
           </li>  
       </ul>      
     </div>

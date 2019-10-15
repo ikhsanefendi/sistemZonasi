@@ -17,31 +17,21 @@
 		<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 		   
 		    <div class="form-group">
-		        <label class="col-lg-2 control-label">Nama Siswa</label>
+		        <label class="col-lg-2 control-label">Id Kriteria</label>
+		        <div class="col-lg-5">
+		            <input type="text" name="id" id="id" class="form-control">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		    	<label class="col-lg-2 control-label">Nama Kriteria</label>
 		        <div class="col-lg-5">
 		            <input type="text" name="nama" id="nama" class="form-control">
 		        </div>
 		    </div>
-		    <div class="form-group">
-		    	<label class="col-lg-2 control-label">Nama Sekolah</label>
-		        <div class="col-lg-5">
-		            <select name="smp" id="smp" class="form-control">
-	                    <?php foreach ($smp as $key) {?>
-	                       	<option value="<?php echo $key->nama?>"><?php echo $key->nama?></option>
-	                    <?php } ?>
-	                </select>
-		        </div>
-		    </div>
   			<div class="form-group">
-		        <label class="col-lg-2 control-label">Jumlah Nilai UN</label>
+		        <label class="col-lg-2 control-label">Nilai Kriteria</label>
 		        <div class="col-lg-5">
-		            <input type="number" name="un" id="un" class="form-control">
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-lg-2 control-label">Jumlah Nilai Sekolah</label>
-		        <div class="col-lg-5">
-		            <input type="number" name="ns" id="ns" class="form-control">
+		            <input type="number" name="nilai" id="nilai" class="form-control">
 		        </div>
 		    </div>
       		  <button class="btn btn-primary" type="submit" ><i class="glyphicon glyphicon-hdd"></i> Simpan</button>

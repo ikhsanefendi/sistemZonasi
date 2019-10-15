@@ -25,7 +25,7 @@
 	<br></br>
   <h1 class="text-center">Data Kriteria</h1>
 
-	<a href="<?php echo site_url('Kriteria/tambah')?>" class="btn btn-primary">Tambah Kriteria</a>
+	<a href="<?php echo site_url('Kriteria/tambah')?>" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah Kriteria</a>
 	<br></br>
 
 	<table class="table table-striped" id="kriteria">

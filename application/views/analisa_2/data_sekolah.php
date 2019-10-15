@@ -36,34 +36,63 @@
 	        </tr>
 	    </thead>
 		   
-		   	<?php foreach ($jarak as $jarak){?>
+		   	<?php foreach ($jarak as $jarak){ ?>
 	   			 <tr>
 	   			<?php foreach ($siswa as $key) { ?>	
 			        <td><?php echo $key->id?></td>
 			        <td><?php echo $key->nama_siswa?></td>
-			        <td><?php echo $key->nama_sekolah?></td>
+			        <td><?php $data=$this->db->select('nama')->where('id',$key->nama_sekolah)->get('tb_smp')->row();
+			        echo $data->nama;?></td>
 			        <td><?php echo $key->jumlah_un ?></td>
 			        <td><?php echo $key->jumlah_nilai_sekolah ?></td>
 					<td><?php echo $jarak['hitung_jarak'];?> Km</td>
 					
-					<?php $bu=$bobot_un->nilai;
+					<?php 
+						 $bu=$bobot_un->nilai;
 						 $bn=$bobot_ns->nilai;
-						 $bg=$bobot_guru->nilai;
+						 //masih salah
+						 // $ba=$bobot_akreditasi->nilai;
+						 $ba=0;
 						 $bj=$bobot_jarak->nilai;
-						 $total=$bu+$bn+$bg+$bj;
+						 $total=$bu+$bn+$ba+$bj;
+
+						 $kriteria1=$bu/$total;
+						 $kriteria2=$bn/$total;
+						 $kriteria3=$bj/$total;
+
+
+						 $max_un=$this->db->select_max('jumlah_un')->get('tb_siswa')->row();
+						 $max_un=$max_un->jumlah_un;
+						 $max_ns=$this->db->select_max('jumlah_nilai_sekolah')->get('tb_siswa')->row();
+						 $max_ns=$max_ns->jumlah_nilai_sekolah;
+						 $max_akre=$max_akreditasi->nilai_akreditasi;
 					?> 
 					<td><?php $aaa=$this->db->where('id',$jarak['id_lokasi'])->get('tb_sma')->row();
 								echo $aaa->nama?></td>
 					
 					<td>
-						<?php echo $n_un=$key->jumlah_un/100;
+						<?php if($jarak['hitung_jarak']<6){
+								echo $n_un=$key->jumlah_un/$max_un;
 								echo ' ';
-								echo $n_ns=$key->jumlah_nilai_sekolah/100;
+								echo ' ';
+								echo $n_ns=$key->jumlah_nilai_sekolah/$max_ns;
 								echo ' ';
 							
-								echo $n_akreditasi=$akreditasi/$max_akreditasi->nilai_akreditasi;
-								?>
+								echo $n_akreditasi=$akreditasi/$max_akre;
+								echo ' ';
+						}else{
+							echo "Filter By Sistem Zonasi";
+						}
+						?>
 					</td>
+
+					<td><?php echo $kriteria1;
+								echo ' ';
+								echo $kriteria2;
+								echo ' ';
+								echo $kriteria3;
+								echo ' ';
+					 ?></td>
 
 
 					

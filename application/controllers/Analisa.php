@@ -30,8 +30,6 @@ class Analisa extends CI_Controller {
 	public function saw($id){
 		$this->db->where('id', $id);
 		$data['siswa']=$this->db->get('tb_siswa')->result();
-		
-
 		//cari id sekolah
 		$nama_sekolah=$data['siswa'][0]->nama_sekolah;
 		//cari id_sekolah
@@ -74,7 +72,6 @@ class Analisa extends CI_Controller {
 			// echo " ";
 
 			// echo "<br></br>";
-					
 		}		
 		$data['jarak']=$jarak;	
 		// print_r($data['jarak']);
@@ -83,7 +80,7 @@ class Analisa extends CI_Controller {
 		// $data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
 		$data['bobot_un']=$this->db->select('nilai')->where('id',"nilai_un")->get('tb_bobot')->row();
 		$data['bobot_ns']=$this->db->select('nilai')->where('id',"nilai_ns")->get('tb_bobot')->row();
-		$data['bobot_guru']=$this->db->select('nilai')->where('id',"jumlah_guru")->get('tb_bobot')->row();
+		$data['bobot_akreditasi']=$this->db->select('nilai')->where('id',"jumlah_guru")->get('tb_bobot')->row();
 		$data['bobot_jarak']=$this->db->select('nilai')->where('id',"jarak")->get('tb_bobot')->row();
 		$data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
 		$nilai_akreditasi=$sekolah[0]->nilai_akreditasi;

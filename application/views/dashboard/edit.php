@@ -14,17 +14,17 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-lg-2 control-label">Nilai Akreditasi</label>
+        <label class="col-lg-2 control-label">Alamar</label>
         <div class="col-lg-5">
-            <input type="number" name="akreditasi" class="form-control" value="<?php echo $sekolah['nilai_akreditasi'];?>">
+            <input type="alamat" name="akreditasi" class="form-control" value="<?php echo $sekolah['alamat'];?>">
         </div>
     </div>
-    <div class="form-group">
+   <!--  <div class="form-group">
         <label class="col-lg-2 control-label">Jumlah Guru</label>
         <div class="col-lg-5">
             <input type="number" name="guru" id="guru" class="form-control" value="<?php echo $sekolah['jumlah_guru'];?>">
         </div>
-    </div>
+    </div> -->
   
     
     <div class="form-group well col-lg-7">

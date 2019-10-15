@@ -28,7 +28,7 @@
 	<h1 class="text-center">Data Siswa</h1>
 
 	<a href="<?php echo site_url('Siswa/tambah')?>" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah Siswa</a>
-	<a href="<?php echo site_url('Siswa/import')?>" class="btn btn-primary"><i class="glyphicon glyphicon-book"></i> Import Siswa</a>
+	<!-- <a href="<?php echo site_url('Siswa/import')?>" class="btn btn-primary"><i class="glyphicon glyphicon-book"></i> Import Siswa</a> -->
 	
 	<br></br>
 
@@ -48,7 +48,8 @@
     <tr>
         <td><?php echo $siswa->id?></td>
         <td><?php echo $siswa->nama_siswa?></td>
-        <td><?php echo $siswa->nama_sekolah?></td>
+        <td><?php $data=$this->db->select('nama')->where('id',$siswa->nama_sekolah)->get('tb_smp')->row();
+              echo $data->nama;?></td>
         <td><?php echo $siswa->jumlah_un?></td>
         <td><?php echo $siswa->jumlah_nilai_sekolah?></td>
         <td><a href="<?php echo site_url('Siswa/edit/'.$siswa->id)?>" class="btn btn-success glyphicon glyphicon-edit"></a>
