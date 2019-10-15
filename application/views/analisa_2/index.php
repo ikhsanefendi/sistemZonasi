@@ -32,6 +32,7 @@
 		</script>
 	</head>
 	<body>
+	<br></br>
 	<h1 class="text-left">Analisa Sekolah Terdekat</h1>
 		<div class="col-md-12">
 			<form action="" class="form-horizontal">

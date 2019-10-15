@@ -10,6 +10,7 @@
 		
 	</script>
 	<body>
+		<br></br>
 		<div class="col-lg-12">
 		<h1>Form Tambah Siswa</h1>
 		<br></br>

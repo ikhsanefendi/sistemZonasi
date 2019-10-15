@@ -7,27 +7,34 @@
 		<title>Halaman Kriteria</title>
 
 		<!-- Bootstrap CSS -->
-			<script src="<?php echo base_url('assets/jquery.min.js') ?>"></script>
+	      <script src="<?php echo base_url('assets/jquery.min.js') ?>"></script>
+		  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/datatables/dataTables.min.css" /> 
+          <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+          <script src="<?php echo base_url()?>assets/js/plugins/datatables/dataTables.min.js"></script>
+          
+   		 
+    </head>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    	$('#kriteria').DataTable();
+		} );
+	</script>
 	</head>
 	<body>
-	<h1 class="text-center">Data Kriteria</h1>
+	<br></br>
+  <h1 class="text-center">Data Kriteria</h1>
 
 	<a href="<?php echo site_url('Kriteria/tambah')?>" class="btn btn-primary">Tambah Kriteria</a>
+	<br></br>
 
-	<table class="table table-striped">
+	<table class="table table-striped" id="kriteria">
     <thead>
         <tr>
             <td>no</td>
             <td>Nama Kriteria</td>
             <td>Nilai Kriteria</td>
-            <td colspan="2">Action</td>
+            <td>Action</td>
         </tr>
     </thead>
    	<?php $no=0; foreach ($kriteria as $key) { $no++;
@@ -36,7 +43,8 @@
         <td><?php echo $no;?></td>
         <td><?php echo $key->nama?></td>
         <td><?php echo $key->nilai?></td>
-        <td><a href="<?php echo site_url('Kriteria/delete/'.$key->id)?>" class="glyphicon glyphicon-trash"></a></td>
+        <td><a href="<?php echo site_url('Kriteria/edit/'.$key->id)?>" class="btn btn-success glyphicon glyphicon-edit"></a>
+        <a href="<?php echo site_url('Kriteria/delete/'.$key->id)?>" class="btn btn-danger glyphicon glyphicon-trash"></a></td>
 
     </tr>
    	<?php } ?>

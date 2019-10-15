@@ -10,8 +10,9 @@
 		
 	</script>
 	<body>
+		<br></br>
 		<div class="col-lg-12">
-		<h1>Form Tambah Ruangan</h1>
+		<h1>Form Tambah Sekolah</h1>
 		<br></br>
 		<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 		    <div class="form-group">

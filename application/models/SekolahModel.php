@@ -15,6 +15,10 @@ class SekolahModel extends CI_Model {
 	function tambahSMA($object){
 		$this->db->insert('tb_sma', $object);
 	}
+
+	function updateSMP($id){
+		
+	}
 }
 
 /* End of file SekolahModel.php */

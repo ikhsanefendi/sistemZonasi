@@ -17,6 +17,7 @@
 		<![endif]-->
 	</head>
 	<body>
+	<br></br>
 	<h1 class="text-center">Data Siswa</h1>
 
 	<a href="<?php echo site_url('Siswa/tambah_siswa/'.$this->uri->segment(3) )?>" class="btn btn-primary">Tambah Siswa</a>

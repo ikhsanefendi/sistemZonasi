@@ -1,112 +1,63 @@
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Material Dashboard by Creative Tim
-  </title>
-  <head>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
+<!DOCTYPE html>
+<html> <!--<![endif]-->
 
- 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dashboard - LanderApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/icon.css" />
-  <!-- <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets2/img/favicon.png"> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <!-- Open Sans font from Google CDN -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&amp;subset=latin" rel="stylesheet" type="text/css">
+
+  <!-- LanderApp's stylesheets -->
+  <link href="<?php echo base_url();?>assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url();?>assets/stylesheets/landerapp.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url();?>assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url();?>assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url();?>assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+
 </head>
-
-
- <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?php  echo base_url()?>assets2/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo">
-        <a href="" class="simple-text logo-normal">
-          E-Sistem
-        </a>
-      </div>
-      <div class="sidebar-wrapper">
-<<<<<<< HEAD
-      <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('Dashboard');?>">
-          <i class="material-icons">dashboard</i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
-          <i class="material-icons">person</i>
-          <span>Sekolah</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Siswa');?>">
-            <i class="material-icons">person</i>
-          <span>Siswa</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Kriteria');?>">
-          <i class="material-icons">library_books</i>
-          <span>Kriteria</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<<?php echo site_url('Analisa');?>">
-            <i class="material-icons">library_books</i>
-          <span>Analisa</span></a>
-      </li>
-    </ul>
-=======
-        <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="<?php echo site_url('Dashboard');?>">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
+<body>
+  <div id="main-menu" role="navigation">
+      <ul class="navigation">
+          <li>
+            <a href="<?php echo site_url('Dashboard');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Dashboard</span></a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Sekolah');?>">
-              <i class="material-icons">person</i>
-              <p>Sekolah</p>
-            </a>
+          <li>
+            <a href="<?php echo site_url('Sekolah');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Sekolah</span></a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Siswa');?>">
-              <i class="material-icons">person</i>
-              <p>Siswa</p>
-            </a>
+          <li>
+            <a href="<?php echo site_url('Siswa');?>"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Siswa</span></a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Kriteria');?>">
-              <i class="material-icons">library_books</i>
-              <p>Kriteria</p>
-            </a>
+        
+          <li>
+            <a href="<?php echo site_url('Kriteria');?>"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">Kriteria</span></a>
           </li>
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Bobot');?>">
-              <i class="material-icons">library_books</i>
-              <p>Nilai Bobot</p>
-            </a>
-          </li> -->
-          <li class="nav-item ">
-            <a class="nav-link" href="<?php echo site_url('Analisa');?>">
-              <i class="material-icons">library_books</i>
-              <p>Analisa</p>
-            </a>
-          </li>
-          
-        </ul>
->>>>>>> 585839c97f2a11dc527eb8f0a9fa269df5664447
-      </div>
-      </div>
-    </div>       
+          <li>
+            <a href="<?php echo site_url('Analisa');?>"><i class="menu-icon fa fa-flask"></i><span class="mm-text">Analisa</span></a>
+          </li>  
+      </ul>      
+    </div>
+
+  <div id="main-menu-bg">
+     
+  </div>
 
 
+<!-- Get jQuery from Google CDN -->
+<!--[if !IE]> -->
+  <script type="text/javascript"> window.jQuery || document.write('<script src="<?php echo base_url();?>assets/javascripts/jquery.min.js">'+"<"+"/script>"); </script>
 
-  <!--  Google Maps Plugin    -->
-  <!-- Chartist JS -->
+<script src="<?php echo base_url();?>assets/javascripts/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/javascripts/landerapp.min.js"></script>
+
+<script type="text/javascript">
+  init.push(function () {
+    // Javascript code here
+  })
+  window.LanderApp.start(init);
+</script>
+
+</body>
+</html>

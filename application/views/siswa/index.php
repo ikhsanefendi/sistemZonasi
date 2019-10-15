@@ -7,23 +7,32 @@
 		<title>Title Page</title>
 
 		<!-- Bootstrap CSS -->
-			<script src="<?php echo base_url('assets/jquery.min.js') ?>"></script>
+		  <script src="<?php echo base_url('assets/jquery.min.js') ?>"></script>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+          <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/datatables/dataTables.min.css" /> 
+          <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+          <script src="<?php echo base_url()?>assets/js/plugins/datatables/dataTables.min.js"></script>
+   		 
+    </head>
+
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    	$('#siswa').DataTable();
+		} );
+	</script>
+
+
 	</head>
 	<body>
+  <br></br>
 	<h1 class="text-center">Data Siswa</h1>
 
-	<a href="<?php echo site_url('Siswa/tambah')?>" class="btn btn-primary">Tambah Siswa</a>
-	<a href="<?php echo site_url('Siswa/import')?>" class="btn btn-primary">Import Siswa</a>
+	<a href="<?php echo site_url('Siswa/tambah')?>" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah Siswa</a>
+	<a href="<?php echo site_url('Siswa/import')?>" class="btn btn-primary"><i class="glyphicon glyphicon-book"></i> Import Siswa</a>
+	
+	<br></br>
 
-
-	<table class="table table-striped">
+	<table class="table table-striped" id="siswa">
     <thead>
         <tr>
             <td>Id Siswa</td>
@@ -42,7 +51,8 @@
         <td><?php echo $siswa->nama_sekolah?></td>
         <td><?php echo $siswa->jumlah_un?></td>
         <td><?php echo $siswa->jumlah_nilai_sekolah?></td>
-        <td><a href="<?php echo site_url('Siswa/delete/'.$siswa->id)?>" class="glyphicon glyphicon-trash"></a></td>
+        <td><a href="<?php echo site_url('Siswa/edit/'.$siswa->id)?>" class="btn btn-success glyphicon glyphicon-edit"></a>
+        	<a href="<?php echo site_url('Siswa/delete/'.$siswa->id)?>" class="btn btn-danger glyphicon glyphicon-trash"></a></td>
 
     </tr>
    	<?php } ?>
