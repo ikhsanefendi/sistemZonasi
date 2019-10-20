@@ -80,7 +80,7 @@ class Analisa extends CI_Controller {
 		// $data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
 		$data['bobot_un']=$this->db->select('nilai')->where('id',"nilai_un")->get('tb_bobot')->row();
 		$data['bobot_ns']=$this->db->select('nilai')->where('id',"nilai_ns")->get('tb_bobot')->row();
-		$data['bobot_akreditasi']=$this->db->select('nilai')->where('id',"jumlah_guru")->get('tb_bobot')->row();
+		$data['bobot_akreditasi']=$this->db->select('nilai')->where('id',"akreditasi")->get('tb_bobot')->row();
 		$data['bobot_jarak']=$this->db->select('nilai')->where('id',"jarak")->get('tb_bobot')->row();
 		$data['max_guru']=$this->db->select_max('jumlah_guru')->get('tb_smp')->row();
 		$nilai_akreditasi=$sekolah[0]->nilai_akreditasi;
@@ -90,6 +90,8 @@ class Analisa extends CI_Controller {
 
 		// // print_r($data['max_guru']);
 		// die();
+// 		print_r($jarak);
+// die();
 		$this->load->view('analisa_2/data_sekolah',$data);
 	}
 

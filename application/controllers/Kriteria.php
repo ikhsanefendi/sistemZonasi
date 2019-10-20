@@ -7,6 +7,11 @@ class Kriteria extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library(array('template'));
+
+		if(!$this->session->userdata('logged_in')){
+            echo "<script>alert('Anda Harus Login')</script>";
+            redirect('Login','refresh');
+        }
 	}
 
 

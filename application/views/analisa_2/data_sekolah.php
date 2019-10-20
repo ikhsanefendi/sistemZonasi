@@ -31,7 +31,6 @@
 	            <td>Jarak</td>
 	            <td>Nama SMA</td>
 	            <td>Penilaian</td>
-	            <td>Peluang Masuk</td>
 
 	        </tr>
 	    </thead>
@@ -51,14 +50,15 @@
 						 $bu=$bobot_un->nilai;
 						 $bn=$bobot_ns->nilai;
 						 //masih salah
-						 // $ba=$bobot_akreditasi->nilai;
-						 $ba=0;
+						 $ba=$bobot_akreditasi->nilai;
+
 						 $bj=$bobot_jarak->nilai;
 						 $total=$bu+$bn+$ba+$bj;
 
-						 $kriteria1=$bu/$total;
-						 $kriteria2=$bn/$total;
-						 $kriteria3=$bj/$total;
+						 $kriteria_un=$bu/$total;
+						 $kriteria_ns=$bn/$total;
+						 $kriteria_jarak=$bj/$total;
+						 $kriteria_akre=$ba/$total;
 
 
 						 $max_un=$this->db->select_max('jumlah_un')->get('tb_siswa')->row();
@@ -72,27 +72,27 @@
 					
 					<td>
 						<?php if($jarak['hitung_jarak']<6){
-								echo $n_un=$key->jumlah_un/$max_un;
-								echo ' ';
-								echo ' ';
-								echo $n_ns=$key->jumlah_nilai_sekolah/$max_ns;
-								echo ' ';
+								//$jarak=$$jarak['hitung_jarak'];
+								$n_un=$key->jumlah_un/$max_un;
+								
+								$n_ns=$key->jumlah_nilai_sekolah/$max_ns;
 							
-								echo $n_akreditasi=$akreditasi/$max_akre;
+								$n_akreditasi=$akreditasi/$max_akre;
+								
+								// echo $this->db->select_max($jarak['hitung_jarak']);
+								
+								// echo 6/$jarak['hitung_jarak']*$kriteria_jarak;
 								echo ' ';
+
+								// echo 'N_A ';
+								echo $analisa=round(($n_un*$kriteria_un)+($n_ns*$kriteria_ns)+(6/$jarak['hitung_jarak']*$kriteria_jarak)+($n_akreditasi*$kriteria_akre),2);
 						}else{
 							echo "Filter By Sistem Zonasi";
 						}
 						?>
 					</td>
 
-					<td><?php echo $kriteria1;
-								echo ' ';
-								echo $kriteria2;
-								echo ' ';
-								echo $kriteria3;
-								echo ' ';
-					 ?></td>
+					<td><?php ?></td>
 
 
 					
